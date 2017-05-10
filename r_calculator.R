@@ -59,10 +59,14 @@ print("8.Sin")
 print("9.Cos")
 print("10.Tan")
 
-continue <- TRUE
-while(continue){
+loop <- TRUE
+while(loop){
   # Get user input
-  Selection = as.integer(readline(prompt="Enter your selection: "))
+  selection = as.integer(readline(prompt="Enter your selection: "))
+  if (selection < 0 || selection > 10){
+    print("You have made an invalid selection")
+    break()
+  }
   num1 = as.numeric(readline(prompt="Enter number for calculation: "))
   if (Selection <=6 ) {
     num2 = as.numeric(readline(prompt="Enter second number: "))
@@ -76,5 +80,5 @@ while(continue){
   } else print(paste( operator, num1, "=", result))
   ask = readline(prompt="Do you wish to do another calculation? y or any other key ")
   if (ask != "y" )
-    continue <- FALSE
+    loop <- FALSE
 }
