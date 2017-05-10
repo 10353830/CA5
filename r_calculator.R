@@ -41,6 +41,10 @@ sine <- function(x) {
 coS <- function(x) {
   return(cos(x))
 }
+#Tan Function
+taN <- function(x) {
+  return(tan(x))
+}
 
 #Show Menu
 print("Make Selection for calculation")
@@ -53,6 +57,7 @@ print("6.Exponential")
 print("7.Square Root")
 print("8.Sin")
 print("9.Cos")
+print("10.Tan")
 
 
 # Get user input
@@ -62,9 +67,9 @@ if (Selection <=6 ) {
   num2 = as.numeric(readline(prompt="Enter second number: "))
 }
 #Get output
-operator <- switch(Selection,"Plus","Minus","Multiplied by","Divided by","To the Power of", "to Exponent of","The Square Root of","Sin of","Cos of")
+operator <- switch(Selection,"Plus","Minus","Multiplied by","Divided by","To the Power of", "to Exponent of","The Square Root of","Sin of","Cos of","Tan of")
 result <- switch(Selection, add(num1, num2), subtract(num1, num2), multiply(num1, num2), divide(num1, num2)
-                 ,power(num1, num2), exp(num1, num2), sqrts(num1), sine(num1), coS(num1))
+                 ,power(num1, num2), exp(num1, num2), sqrts(num1), sine(num1), coS(num1), taN(num1))
 if (Selection <=6){
   print(paste(num1, operator, num2, "=", result))
 } else print(paste( operator, num1, "=", result))
