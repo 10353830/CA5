@@ -1,5 +1,7 @@
 #Derek Baker 10353830
-
+#
+#Set num2 to avoid error when automatic calculations are run
+num2 <- 1
 #Do calculations
 #Add Function
 add <- function(x, y) {
